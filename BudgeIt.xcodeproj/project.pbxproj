@@ -10,11 +10,16 @@
 		2D63DFCAC242F9A0DAA4B652 /* Pods_BudgeIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0177C1717DD0825E483CF4 /* Pods_BudgeIt.framework */; };
 		C96CBB311DCE6CAB0049659B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96CBB301DCE6CAB0049659B /* User.swift */; };
 		C96CBB331DCE6E550049659B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96CBB321DCE6E550049659B /* Post.swift */; };
+		C96CBB361DCE752F0049659B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96CBB351DCE752F0049659B /* HomeViewController.swift */; };
+		C96CBB381DCE753A0049659B /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96CBB371DCE753A0049659B /* AddPostViewController.swift */; };
+		C96CBB3A1DCE75490049659B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96CBB391DCE75490049659B /* DetailViewController.swift */; };
+		C96CBB3C1DCE75DC0049659B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96CBB3B1DCE75DC0049659B /* Comment.swift */; };
 		C976F96D1DCE5A7000884DBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C976F96C1DCE5A7000884DBF /* AppDelegate.swift */; };
 		C976F96F1DCE5A7000884DBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C976F96E1DCE5A7000884DBF /* ViewController.swift */; };
 		C976F9721DCE5A7000884DBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C976F9701DCE5A7000884DBF /* Main.storyboard */; };
 		C976F9741DCE5A7000884DBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C976F9731DCE5A7000884DBF /* Assets.xcassets */; };
 		C976F9771DCE5A7000884DBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C976F9751DCE5A7000884DBF /* LaunchScreen.storyboard */; };
+		C9AD723C1DCE78B2004E9C94 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD723B1DCE78B2004E9C94 /* HomeTableViewCell.swift */; };
 		C9E526871DCE5C4D009F4654 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E526861DCE5C4D009F4654 /* LoginViewController.swift */; };
 		C9E5268C1DCE6678009F4654 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9E5268B1DCE6678009F4654 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -24,6 +29,10 @@
 		A3060B3484A0712CDCAEC39C /* Pods-BudgeIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgeIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-BudgeIt/Pods-BudgeIt.release.xcconfig"; sourceTree = "<group>"; };
 		C96CBB301DCE6CAB0049659B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C96CBB321DCE6E550049659B /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		C96CBB351DCE752F0049659B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C96CBB371DCE753A0049659B /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		C96CBB391DCE75490049659B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C96CBB3B1DCE75DC0049659B /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		C976F9691DCE5A7000884DBF /* BudgeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgeIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C976F96C1DCE5A7000884DBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C976F96E1DCE5A7000884DBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +40,7 @@
 		C976F9731DCE5A7000884DBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C976F9761DCE5A7000884DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C976F9781DCE5A7000884DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9AD723B1DCE78B2004E9C94 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		C9E526861DCE5C4D009F4654 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C9E526881DCE5E80009F4654 /* BudgeIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BudgeIt.entitlements; sourceTree = "<group>"; };
 		C9E5268B1DCE6678009F4654 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -62,6 +72,7 @@
 			children = (
 				C96CBB301DCE6CAB0049659B /* User.swift */,
 				C96CBB321DCE6E550049659B /* Post.swift */,
+				C96CBB3B1DCE75DC0049659B /* Comment.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -69,6 +80,7 @@
 		C96CBB341DCE71010049659B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C9AD723B1DCE78B2004E9C94 /* HomeTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -113,6 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				C9E526861DCE5C4D009F4654 /* LoginViewController.swift */,
+				C96CBB351DCE752F0049659B /* HomeViewController.swift */,
+				C96CBB371DCE753A0049659B /* AddPostViewController.swift */,
+				C96CBB391DCE75490049659B /* DetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -261,6 +276,11 @@
 				C976F96F1DCE5A7000884DBF /* ViewController.swift in Sources */,
 				C976F96D1DCE5A7000884DBF /* AppDelegate.swift in Sources */,
 				C96CBB331DCE6E550049659B /* Post.swift in Sources */,
+				C96CBB361DCE752F0049659B /* HomeViewController.swift in Sources */,
+				C9AD723C1DCE78B2004E9C94 /* HomeTableViewCell.swift in Sources */,
+				C96CBB381DCE753A0049659B /* AddPostViewController.swift in Sources */,
+				C96CBB3C1DCE75DC0049659B /* Comment.swift in Sources */,
+				C96CBB3A1DCE75490049659B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +324,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -353,6 +374,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
