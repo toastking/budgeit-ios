@@ -11,41 +11,23 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class HomeViewController: UIViewController {
     
-    var ref: FIRDatabaseReference!
     var posts:[Post]!
-    
+    var ref: FIRDatabaseReference!
     @IBOutlet weak var homeTableView: UITableView!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
         ref = FIRDatabase.database().reference()
+        super.viewDidLoad()
         
-        homeTableView.delegate = self
-        homeTableView.dataSource = self
+//        homeTableView.delegate = self
+//        homeTableView.dataSource = self
         homeTableView.rowHeight = UITableViewAutomaticDimension //set thiis so autolayout will decide the height
         homeTableView.estimatedRowHeight = 200
         
-        // Do any additional setup after loading the view.
+     
     }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        if posts != nil{
-            return posts.count
-        }else{
-            return 0
-        }
-        
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath as IndexPath) as! HomeTableViewCell
-        //assign the business
-        cell.post = posts[indexPath.row]
-        return cell
-    }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -8,28 +8,25 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
 import FirebaseDatabase
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    var ref: FIRDatabaseReference!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = FIRDatabase.database().reference()
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     @IBAction func onSignUpButtonPress(_ sender: AnyObject) {
         let signupAlert = UIAlertController(title: "Sign Up", message: "Sign up for the app", preferredStyle: .alert)
-
+        
         //add sign up text fields
         signupAlert.addTextField { (textField) in
             textField.placeholder = "Username"
@@ -62,13 +59,10 @@ class LoginViewController: UIViewController {
             let zipcodeField = signupAlert.textFields![4] as UITextField
             //TODO: add data to database
             FIRAuth.auth()!.createUser(withEmail: emailField.text!,
-                password: passwordField.text!) { user, error in
-                    if error != nil {
-                        print(error?.localizedDescription)
-                    }else{
-                        //save the data for the user
-                        self.ref.child("users").child((user?.uid)!).setValue(["username": usernameField.text!,"occupation":occupationField.text!,"zip":zipcodeField.text!,"points":100])
-                    }
+                                       password: passwordField.text!) { user, error in
+                                        if let user = user {
+                                            //save the data for the user
+                                        }
             }
         }
         
@@ -84,21 +78,19 @@ class LoginViewController: UIViewController {
         FIRAuth.auth()?.signIn(withEmail: self.userNameField.text!, password: self.passwordField.text!) { (user, error) in
             if(error == nil){
                 //perform the segue
-                self.performSegue(withIdentifier: "LoginSegue", sender: self)
-            }else{
-                print(error?.localizedDescription)
+                self.shouldPerformSegue(withIdentifier: "LoginSegue", sender: self)
             }
         }
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
