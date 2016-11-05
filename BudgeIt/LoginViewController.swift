@@ -9,14 +9,17 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    var ref: FIRDatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ref = FIRDatabase.database().reference()
         // Do any additional setup after loading the view.
     }
 
@@ -61,7 +64,10 @@ class LoginViewController: UIViewController {
             FIRAuth.auth()!.createUser(withEmail: emailField.text!,
                 password: passwordField.text!) { user, error in
                     if error != nil {
-                        print(error)
+                        print(error?.localizedDescription)
+                    }else{
+                        //save the data for the user
+                        self.ref.child("users").child((user?.uid)!).setValue(["username": usernameField.text!,"occupation":occupationField.text!,"zip":zipcodeField.text!,"points":100])
                     }
             }
         }
@@ -78,7 +84,9 @@ class LoginViewController: UIViewController {
         FIRAuth.auth()?.signIn(withEmail: self.userNameField.text!, password: self.passwordField.text!) { (user, error) in
             if(error == nil){
                 //perform the segue
-                self.shouldPerformSegue(withIdentifier: "LoginSegue", sender: self)
+                self.performSegue(withIdentifier: "LoginSegue", sender: self)
+            }else{
+                print(error?.localizedDescription)
             }
         }
     }
