@@ -13,13 +13,16 @@ import FirebaseDatabase
 
 class HomeViewController: UIViewController {
     
-    var posts:[Post]!
-    var ref: FIRDatabaseReference!
     @IBOutlet weak var homeTableView: UITableView!
 
+    var posts:[Post]!
+    var ref:FIRDatabaseReference?=nil
+    
     override func viewDidLoad() {
-        ref = FIRDatabase.database().reference()
+
         super.viewDidLoad()
+        
+        ref = FIRDatabase.database().reference()
         
 //        homeTableView.delegate = self
 //        homeTableView.dataSource = self

@@ -8,15 +8,20 @@
 
 import UIKit
 import Firebase
-import FirebaseDatabase
 import FirebaseAuth
+import FirebaseDatabase
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
+    var ref:FIRDatabaseReference?=nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = FIRDatabase.database().reference()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -83,14 +88,15 @@ class LoginViewController: UIViewController {
         }
     }
     
-    /*
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
+        let home = segue.destination as! HomeViewController
+        
      }
-     */
+
     
 }
