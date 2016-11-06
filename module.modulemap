@@ -1,0 +1,4 @@
+module Firebase {
+  header "/Users/Matt/Documents/BudgeIt/BudgeIt/Firebase.h"
+  export *
+}
